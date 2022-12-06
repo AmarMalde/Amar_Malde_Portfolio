@@ -78,7 +78,7 @@ body {
 #content {
     padding: 25px 10%;
     display: grid;
-    grid-template-rows: 1fr 6fr 1fr;
+    grid-template-rows: 1fr 5fr 0.5fr;
     grid-template-columns: 250px 3fr;
     grid-template-areas:
         "abtMe abtMeContent"
@@ -92,6 +92,13 @@ body {
 
 #aboutMeContent {
     grid-area: abtMeContent;
+    display: flex;
+    align-items: center;
+}
+
+#self_image {
+    padding-right: 30px;
+    height: fit-content;
 }
 
 #projectLinksTitle {
@@ -135,7 +142,7 @@ p {
 #projectLinkContent {
     padding: 50px 50px;
     display: grid;
-    grid-template-rows: 700px 300px 300px;
+    grid-template-rows: 2fr 1fr 1fr;
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
         "project1 project1"
