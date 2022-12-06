@@ -1,7 +1,7 @@
 :root {
-    --primaryBlue:  rgb(59, 172, 172);
-    --darkerBlue: rgb(18, 53, 53);
-    --offWhite: rgb(199, 199, 199);
+    --primaryBlue:  rgb(231, 179, 0);
+    --light-grey: rgb(196, 196, 196);
+    --dark-grey: rgb(77, 77, 77);
 }
 
 * {
@@ -15,24 +15,24 @@ header {
     justify-content: space-between;
     align-items: center;
     padding-right: 50px;
-    background-color: var(--offWhite);
+    background-color: var(--dark-grey);
 }
 
 h1,
 li,
 .topnav a {
-    font-weight: 750;
-    font-size: 16px;
-    color: var(--offWhite);
+    font-weight: 900;
+    font-size: 24px;
+    color: var(--dark-grey);
     text-decoration: none;
 }
 
 h1 {
-    color: var(--offWhite);
     background-color: var(--primaryBlue);
     padding-left: 50px;
     font-size: 60px;
-    margin: 10px 0px
+    margin: 25px 0px;
+    padding-right: 20px;
 }
 
 .topnav {
@@ -51,7 +51,7 @@ h1 {
 }
 
 .topnav li a:hover {
-    color: var(--darkerBlue);
+    color: var(--light-grey);
 }
 
 #imageAndSub {
@@ -59,27 +59,27 @@ h1 {
     height: 100%;
     background-position: center;
     background-size: cover;
-    padding: 100px;
+    padding: 150px;
 }
 
 h2 {
     font-weight: 750;
     font-size: 42px;
-    color: var(--offWhite);
-    background-color: var(--primaryBlue);
+    color: var(--dark-grey);
     position: absolute;
     right: 5%;
+    padding: 7px;
 }
 
 body {
-    background-color: var(--offWhite);
+    background-color: var(--light-grey);
 }
 
 #content {
-    padding: 25px 100px;
+    padding: 25px 10%;
     display: grid;
-    grid-template-rows: 1fr 3fr 1fr;
-    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr 6fr 1fr;
+    grid-template-columns: 250px 3fr;
     grid-template-areas:
         "abtMe abtMeContent"
         "projectLinks projectLinkContent"
@@ -116,32 +116,40 @@ body {
 }
 
 .sectionTitle {
-    border-right: 5px solid var(--darkerBlue);
-    margin: 30px 10px;
+    border-right: 5px solid var(--dark-grey);
+    margin: 10px 30px 10px 0px;
     text-align: right;
-    padding: 15px 20px;
+    padding: 15px 25px;
+}
+
+h3 {
     font-weight: 750;
     font-size: 40px;
-    color: var(--darkerBlue);   
+    color: var(--dark-grey);   
+}
+
+p {
+    font-size: 23px;
 }
 
 #projectLinkContent {
     padding: 50px 50px;
     display: grid;
-    grid-template-rows: 3fr 1fr 1fr;
+    grid-template-rows: 700px 300px 300px;
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
         "project1 project1"
         "project2 project3"
         "project4 project5";
-}
+    }
 
 #projectLinkContent > a {
     background-position: center;
     background-size: cover;
     display: flex;
-    margin: 5px;
+    margin: 10px;
     background-repeat: no-repeat;
+    border: 5px solid var(--dark-grey);
 }
 
 #project1 {
@@ -173,18 +181,37 @@ h4 {
     display: inline-block;
     align-self: flex-end;
     padding: 7px;
-    color: var(--offWhite);
-    background-color: var(--darkerBlue);
+    color: var(--dark-grey);
+    background-color: var(--primaryBlue);
     margin: 10px;
+    font-size: 40px;
 }
 
 #contactMeContent, #contactMeContent a{
-    color: var(--darkerBlue);
+    color: var(--dark-grey);
+    font-size: 25px;
 }
 
 footer {
-    color: var(--offWhite);
+    color: var(--dark-grey);
     background-color: var(--primaryBlue);
     padding: 15px;
     text-align: center;
+    font-size: 25px;
 }
+
+@media only screen and (max-width: 1000px) {
+
+    #projectLinkContent {
+        grid-template-rows: 3fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "project1"
+            "project2"
+            "project3"
+            "project4" 
+            "project5";
+        }
+
+}
+
