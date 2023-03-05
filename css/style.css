@@ -78,12 +78,22 @@ body {
 #content {
     padding: 25px 10%;
     display: grid;
-    grid-template-rows: 1fr 5fr 0.5fr;
+    grid-template-rows: 1fr 5fr 0.5fr 0.5fr;
     grid-template-columns: 250px 3fr;
     grid-template-areas:
         "abtMe abtMeContent"
         "projectLinks projectLinkContent"
+        "githubLinks githubLinksContent"
         "contactMe contactMeContent";
+}
+
+
+#githubLinks {
+    grid-area: projectLinks;
+}
+
+#githubLinksContent {
+    grid-area: githubLinksContent;
 }
 
 #aboutMeTitle {
@@ -161,22 +171,22 @@ p {
 
 #project1 {
     grid-area: project1;
-    background-image: url("../assets/project1_Horiseon.PNG"); 
+    background-image: url("../assets/MoviePickerScreenshot.jpg"); 
 }
 
 #project2 {
     grid-area: project2;
-    background-image: url("../assets/project2_sguide.jpg");
+    background-image: url("../assets/CodingQuizScreenshot.jpg");
 }
 
 #project3 {
     grid-area: project3;
-    background-image: url("../assets/coming_soon.jpg");
+    background-image: url("../assets/WorkdayScheduler.png");
 }
 
 #project4 {
     grid-area: project4;
-    background-image: url("../assets/closed.jpg");
+    background-image: url("../assets/PasswordGenerator.jpg");
 }
 
 #project5 {
@@ -194,7 +204,8 @@ h4 {
     font-size: 40px;
 }
 
-#contactMeContent, #contactMeContent a{
+#contactMeContent, #contactMeContent, #githubLinksContent a{
+    text-decoration: none;
     color: var(--dark-grey);
     font-size: 25px;
 }
@@ -207,7 +218,7 @@ footer {
     font-size: 25px;
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1250px) {
 
     #content {
         padding: 25px 10%;
@@ -236,7 +247,7 @@ footer {
     }
 
     #projectLinkContent {
-        grid-template-rows: 3fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 2fr 1fr 1fr 1fr 1fr;
         grid-template-columns: 1fr;
         grid-template-areas:
             "project1"
